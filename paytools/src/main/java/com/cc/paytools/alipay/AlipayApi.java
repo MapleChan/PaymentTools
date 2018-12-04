@@ -108,21 +108,4 @@ public class AlipayApi {
 		Thread payThread = new Thread(payRunnable);
 		payThread.start();
 	}
-
-	public interface AliPayListener {
-		/**
-		 * 判断支付成功或失败前需要做的操作
-		 */
-		void setOnFinishClicekListener();
-
-		/**
-		 * 支付成功后需要做的操作
-		 */
-		void setOnSuccessClicekListener();
-
-		/**
-		 * 支付失败后需要做的操作
-		 */
-		void setOnFailClicekListener();
-	}
 }
