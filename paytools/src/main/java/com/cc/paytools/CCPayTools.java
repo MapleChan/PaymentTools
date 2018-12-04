@@ -2,6 +2,7 @@ package com.cc.paytools;
 
 import android.app.Activity;
 
+import com.cc.paytools.alipay.AliPayListener;
 import com.cc.paytools.alipay.AlipayApi;
 
 /**
@@ -18,7 +19,7 @@ public class CCPayTools {
 	 * @param payInfo app支付请求参数字符串，主要包含商户的订单信息，key=value形式，以&连接。
 	 * @param aliPayListener 监听接口
 	 */
-	public static void aliPay(Activity activity, String payInfo, AlipayApi.AliPayListener aliPayListener) {
+	public static void aliPay(Activity activity, String payInfo, AliPayListener aliPayListener) {
 		AlipayApi alipayApi = new AlipayApi(activity, aliPayListener);
 		alipayApi.payV2(payInfo);
 	}
